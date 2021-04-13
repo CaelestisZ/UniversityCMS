@@ -1,0 +1,133 @@
+<div class="columns">
+
+  <app-sidebar>
+
+  </app-sidebar>
+
+  <div class="column is-offset-one-fifth my-5 pl-5">
+
+    <h1 class="title">
+      Attendance
+    </h1>
+
+    <div class="field">
+      <label class="label">Select Semester</label>
+      <div class="control">
+        <div class="select is-rounded">
+          <select>
+            <option>Semester 6</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <table class="table is-fullwidth is-hoverable is-striped is-large">
+      <thead>
+        <tr>
+          <th>
+            Course Code
+          </th>
+          <th>
+            Course Title
+          </th>
+          <th>
+            Classes Attended
+          </th>
+          <th>
+            Percentage
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> UE18CS351 </td>
+          <td> Compiler Design </td>
+          <td>
+            {{a1}} / 14
+          </td>
+          <td>
+            {{formatNumber(a1)}} %
+          </td>
+        </tr>
+        <tr>
+          <td> UE18CS352 </td>
+          <td> Cloud Computing</td>
+          <td>
+            {{a2}} / 14
+          </td>
+          <td>
+            {{formatNumber(a2)}} %
+          </td>
+        </tr>
+        <tr>
+          <td> UE18CS353 </td>
+          <td>Object Oriented Analysis and Design of Software Engineering </td>
+          <td>
+            {{a3}} / 14
+          </td>
+          <td>
+            {{formatNumber(a3)}} %
+          </td>
+        </tr>
+        <tr>
+          <td>
+            UE18CS338
+          </td>
+          <td>
+            Human Computer Interaction
+          </td>
+          <td>
+            {{a4}} / 14
+          </td>
+          <td>
+            {{formatNumber(a4)}} %
+          </td>
+        </tr>
+        <tr>
+          <td>
+            UE18CS348
+          </td>
+          <td>
+            Enterprise and Resource Planning
+          </td>
+          <td>
+            {{a5}} / 14
+          </td>
+          <td>
+            {{formatNumber(a5)}} %
+          </td>
+        </tr>
+        <tr>
+          <td>
+            UE18CS354
+          </td>
+          <td>
+            Cloud Computing Laboratory
+          </td>
+          <td>
+            {{a6}} / 14
+          </td>
+          <td>
+            {{formatNumber(a6)}} %
+          </td>
+        </tr>
+        <tr>
+          <td>
+            UE18CS355
+          </td>
+          <td>
+            Object Oriented Analysis and Design of Software Engineering Laboratory
+          </td>
+          <td>
+            {{a7}} / 14
+          </td>
+          <td>
+            {{formatNumber(a7)}} %
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

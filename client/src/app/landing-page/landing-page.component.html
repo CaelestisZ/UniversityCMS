@@ -1,0 +1,139 @@
+<main class="px-3 py-3">
+  <app-navbar>
+
+  </app-navbar>
+</main>
+
+<div class="columns custom-bg">
+  <div class="column px-6 py-6 mx-6 my-6">
+
+    <form #f_login="ngForm" (ngSubmit)="onSubmitLogin(f_login)">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title title has-text-centered px-4 py-4">
+            Sign in
+          </p>
+        </header>
+
+        <div class="card-content px-6 py-6">
+          <div class="content has-text-centered px-6">
+
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input is-medium is-rounded" type="email" placeholder="Email" name="email" ngModel
+                  required>
+                <span class="icon is-medium is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input is-medium is-rounded" type="password" placeholder="Password" name="password" ngModel
+                  required minlength="8">
+                <span class="icon is-medium is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+
+            <div class="field">
+              <p class="control">
+                <span class="tag is-danger is-light is-medium is-rounded mt-1" *ngIf="errorLogin"><i
+                    class="fas fa-bomb"></i>
+                  &nbsp;
+                  {{ errorLogin }}</span>
+                <br />
+                <button class="button is-rounded is-loading is-large mt-4" *ngIf="isLoadingL">
+                  Loading
+                </button>
+
+                <button class="button is-rounded is-outlined is-large mt-4" type="submit"
+                  *ngIf="!isLoadingL"><strong>Login</strong></button>
+              </p>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="column mx-6 my-6">
+    <form #f_signup="ngForm" (ngSubmit)="onSubmitSignup(f_signup)">
+
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title title has-text-centered px-4 py-4">
+            Register
+          </p>
+        </header>
+        <div class="card-content px-6 py-5">
+          <div class="content has-text-centered px-6">
+
+
+
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input is-medium is-rounded" type="text" placeholder="University ID" name="username"
+                  ngModel>
+                <span class="icon is-medium is-left">
+                  <i class="fas fa-university"></i>
+                </span>
+              </p>
+            </div>
+
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input is-medium is-rounded" type="email" placeholder="Email" name="email" ngModel>
+                <span class="icon is-medium is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </p>
+            </div>
+
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input is-medium is-rounded" type="password" placeholder="Password" name="password"
+                  ngModel>
+                <span class="icon is-medium is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input is-medium is-rounded" type="password" placeholder="Confirm your password"
+                  name="passwordConfirm" ngModel>
+                <span class="icon is-medium is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+
+            <div class="field">
+              <p class="control">
+                <div class="tag is-danger is-light is-medium is-rounded mt-1" *ngIf="errorSignup"><i
+                    class="fas fa-bomb"></i>
+                  &nbsp;
+                  {{ errorSignup }}</div>
+                <br />
+                <button class="button is-rounded is-loading is-large mt-4" *ngIf="isLoadingS">
+                  Loading
+                </button>
+
+                <button class="button is-rounded is-outlined is-large mt-4" type="submit"
+                  *ngIf="!isLoadingS"><strong>Sign up</strong></button>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

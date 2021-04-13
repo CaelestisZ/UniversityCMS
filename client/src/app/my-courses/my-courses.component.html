@@ -1,0 +1,114 @@
+<div class="columns">
+
+  <app-sidebar>
+
+  </app-sidebar>
+
+  <div class="column is-offset-one-fifth my-5 pl-5" *ngIf="notClicked">
+
+
+    <h1 class="title">
+      My Courses
+    </h1>
+
+
+    <div class="field">
+      <label class="label">Select Semester</label>
+      <div class="control">
+        <div class="select is-rounded">
+          <select>
+            <option>Semester 6</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <table class="table is-fullwidth is-hoverable is-striped is-large">
+      <thead>
+        <tr>
+          <th>
+            Course Code
+          </th>
+          <th>
+            Course Title
+          </th>
+          <th>
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="custom-row" (click)="courseContent('UE18CS351')">
+          <td>UE18CS351</td>
+          <td>Compiler Design</td>
+          <td>Enrolled</td>
+        </tr>
+        <tr class="custom-row" (click)="courseContent('UE18CS352')">
+          <td>UE18CS352</td>
+          <td>Cloud Computing</td>
+          <td>Enrolled</td>
+        </tr>
+        <tr class="custom-row" (click)="courseContent('UE18CS353')">
+          <td>UE18CS353</td>
+          <td>Object Oriented Analysis and Design of Software Engineering</td>
+          <td>Enrolled</td>
+        </tr>
+        <tr class="custom-row" (click)="courseContent('UE18CS338')">
+          <td>UE18CS338</td>
+          <td>Human Computer Interaction </td>
+          <td>Enrolled</td>
+        </tr>
+        <tr class="custom-row" (click)="courseContent('UE18CS348')">
+          <td>UE18CS348</td>
+          <td>Enterprise and Resource Planning</td>
+          <td>Enrolled</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="column is-offset-one-fifth my-5 pl-5" *ngIf="!notClicked">
+
+    <h1 class="title"> {{ courseCode }} </h1>
+
+    <div class="card" *ngIf="noDocuments">
+      <header class="card-header">
+        <p class="card-header-title">
+          No Material Uploaded
+        </p>
+
+      </header>
+    </div>
+
+    <div class="card">
+
+      <div class="card-holder" *ngFor='let content of documents'>
+
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              {{ content.topic }}
+            </p>
+          </header>
+
+          <div class="card-content">
+            <div class="content" [innerHTML]="content.article">
+
+            </div>
+            <div class="content" [innerHTML]="content.video | noSanitize">
+
+            </div>
+          </div>
+
+        </div>
+
+        <br>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,49 @@
+.is-full-height {
+  min-height: 104vh !important;
+}
+
+.default-cursor {
+  cursor: default;
+}
+
+.scrollable {
+  overflow-y: auto;
+  position: relative;
+  height: 35vh;
+}
+
+.to-right {
+  float: right;
+  width: 100vw;
+}
+
+.fixed {
+  position: fixed;
+
+}
+
+.relative {
+  position: relative;
+}
+
+.move-tag {
+  position: absolute;
+  top: -20px;
+  right: 0px;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.block {
+  display: block;
+}
+
+.move-right {
+  float: right;
+}
+
+.modified {
+  background-color: white;
+}

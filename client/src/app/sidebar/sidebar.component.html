@@ -1,0 +1,36 @@
+<aside class="menu column is-one-fifth has-background-primary is-full-height fixed">
+
+  <ul class="menu-list media default-cursor my-3 mx-2">
+
+    <div class="media-content">
+      <a class="navbar-item modified" routerLink="/announcements">
+        <img src="../../assets/logoPesu.png" alt="PESU logo">
+      </a>
+    </div>
+  </ul>
+
+  <div class="navbar-divider"></div>
+
+  <ul class="menu-list">
+    <li><a routerLink='/notifications' routerLinkActive='is-active'> <i class="fas fa-home"></i> &nbsp; Home</a></li>
+    <li><a routerLink='/my-courses' routerLinkActive='is-active'> <i class="fas fa-book"></i> &nbsp; My Courses</a></li>
+    <li><a routerLink='/attendance' routerLinkActive='is-active'> <i class="fas fa-address-book"></i> &nbsp;
+        Attendance</a>
+    </li>
+    <li><a routerLink='/feedback' routerLinkActive='is-active'> <i class="fas fa-comment"></i> &nbsp; Feedback</a></li>
+
+  </ul>
+
+  <div class="navbar-divider">
+
+  </div>
+
+  <ul class="menu-list">
+    <li><a routerLink='/' (click)="logout"> <i class="fas fa-sign-out-alt"></i> &nbsp; Sign out</a></li>
+  </ul>
+
+  <div class="navbar-divider">
+
+  </div>
+
+</aside>

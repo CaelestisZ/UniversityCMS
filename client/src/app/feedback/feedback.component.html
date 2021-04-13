@@ -1,0 +1,198 @@
+<div class="columns">
+
+  <app-sidebar>
+
+  </app-sidebar>
+
+  <div class="column is-offset-one-fifth my-5 pl-5">
+
+    <h1 class="title">
+      Course Feedback
+    </h1>
+
+
+    <form #feedback="ngForm" (ngSubmit)="onSubmitFeedback(feedback)">
+
+      <div class="field">
+        <label class="label">Course Code</label>
+        <div class="control">
+          <div class="select is-rounded">
+            <select name="courseCode" ngModel required>
+              <option value="UE18CS351">UE18CS351</option>
+              <option value="UE18CS352">UE18CS352</option>
+              <option value="UE18CS353">UE18CS353</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Instructor Name</label>
+        <div class="control">
+          <div class="select is-rounded">
+            <select name="instructor" ngModel required>
+              <option value="George">George</option>
+              <option value="John">John</option>
+              <option value="Mia">Mia</option>
+              <option value="Jessie">Jessie</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Assignments provided were useful in terms of personal development </label>
+
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="a" value="1" ngModel required>
+            Strongly Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="a" value="2" ngModel required>
+            Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="a" value="3" ngModel required>
+            Unsure
+          </label>
+          <label class="radio">
+            <input type="radio" name="a" value="4" ngModel required>
+            Agree
+          </label>
+          <label class="radio">
+            <input type="radio" name="a" value="5" ngModel required>
+            Strongly Agree
+          </label>
+        </div>
+
+      </div>
+
+      <div class="field">
+        <label class="label">Concepts were crystal clear after he/she taught them </label>
+
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="b" value="1" ngModel required>
+            Strongly Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="b" value="2" ngModel required>
+            Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="b" value="3" ngModel required>
+            Unsure
+          </label>
+          <label class="radio">
+            <input type="radio" name="b" value="4" ngModel required>
+            Agree
+          </label>
+          <label class="radio">
+            <input type="radio" name="b" value="5" ngModel required>
+            Strongly Agree
+          </label>
+        </div>
+
+      </div>
+
+      <div class="field">
+        <label class="label">Covered textbook content thoroughly </label>
+
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="c" value="1" ngModel required>
+            Strongly Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="c" value="2" ngModel required>
+            Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="c" value="3" ngModel required>
+            Unsure
+          </label>
+          <label class="radio">
+            <input type="radio" name="c" value="4" ngModel required>
+            Agree
+          </label>
+          <label class="radio">
+            <input type="radio" name="c" value="5" ngModel required>
+            Strongly Agree
+          </label>
+        </div>
+
+      </div>
+
+      <div class="field">
+        <label class="label">Clarified doubts after class </label>
+
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="d" value="1" ngModel required>
+            Strongly Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="d" value="2" ngModel required>
+            Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="d" value="3" ngModel required>
+            Unsure
+          </label>
+          <label class="radio">
+            <input type="radio" name="d" value="4" ngModel required>
+            Agree
+          </label>
+          <label class="radio">
+            <input type="radio" name="d" value="5" ngModel required>
+            Strongly Agree
+          </label>
+        </div>
+
+      </div>
+
+      <div class="field">
+        <label class="label">Begins the class with a summary of whatever was taught in the previous class </label>
+
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="e" value="1" ngModel required>
+            Strongly Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="e" value="2" ngModel required>
+            Disagree
+          </label>
+          <label class="radio">
+            <input type="radio" name="e" value="3" ngModel required>
+            Unsure
+          </label>
+          <label class="radio">
+            <input type="radio" name="e" value="4" ngModel required>
+            Agree
+          </label>
+          <label class="radio">
+            <input type="radio" name="e" value="5" ngModel required>
+            Strongly Agree
+          </label>
+        </div>
+
+      </div>
+
+      <div class="field">
+        <p class="control">
+          <button class="button is-info is-rounded" [disabled]="!feedback.valid">
+            Submit
+          </button>
+          <span class="tag is-success is-rounded mx-5 mt-1" *ngIf="!hideSuccess">Submitted!</span>
+        </p>
+      </div>
+
+
+    </form>
+
+
+  </div>
+
+</div>

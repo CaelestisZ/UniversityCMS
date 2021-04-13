@@ -1,0 +1,11 @@
+.custom-item {
+  font-size: 2rem;
+  background-color: #FCFCFC;
+  color: #363636;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    letter-spacing: 1px;
+    background-color: #E7E7E7;
+  }
+}

@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+
+$primary: #055087;
+$menu-item-color: #ffffff;
+$menu-item-hover-background-color: #90cefa;
+$menu-item-hover-color: #055087;
+$menu-item-active-color: #055087;
+$menu-item-active-background-color: #ffffff;
+$card-background-color: #F6F6F6;
+
+
+@import "../node_modules/bulma/bulma.sass";
+
+// new scrollbar props
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+::selection {
+  background: #D6EDFF;
+}
+
+// Change webpage-wide font-family
+body {
+  font-family: "Poppins", sans-serif;
+}
