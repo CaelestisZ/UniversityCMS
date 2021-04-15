@@ -28,7 +28,7 @@ export class LandingPageComponent implements OnInit {
       this.router.navigate(['/notifications'])
     }, err=>{
       console.log(err)
-      this.errorSignup = err.error.message.substring(0, 22);
+      this.errorSignup = err.error.message;
       this.isLoadingS = false
     })
     form.reset()

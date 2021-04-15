@@ -1,5 +1,6 @@
 const Attendance = require('./../models/attendanceModel');
 const catchAsync = require('./../utils/catchAsync');
+const moment = require('moment');
 
 // Fetches all attendance in db
 exports.getAll = catchAsync(async (req, res, next) => {
@@ -30,7 +31,8 @@ exports.getAttendanceForUser = catchAsync(async (req, res, next) => {
 exports.getForDate = catchAsync(async (req, res, next) => {
     const attendance = await Attendance.find({
         date: {
-            $regex: "^" + req.params.date,
+            $gte: req.params.date,
+            $lte: req.params.date
         }
     });
 

@@ -21,6 +21,8 @@
             </p>
           </header>
           <div class="card-content">
+
+            <small>{{ announcement.date | slice:0:10 }}</small>
             <div class="content" [innerHTML]="announcement.description">
 
             </div>

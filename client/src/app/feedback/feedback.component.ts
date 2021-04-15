@@ -20,7 +20,7 @@ export class FeedbackComponent implements OnInit {
     const feedback = {
       courseCode: form.value.courseCode,
       instructor: form.value.instructor,
-      ratings: [form.value.a, form.value.b, form.value.c, form.value.c, form.value.d, form.value.e]
+      ratings: [form.value.a, form.value.b, form.value.c, form.value.d, form.value.e]
     }
 
     console.log(JSON.stringify(feedback));

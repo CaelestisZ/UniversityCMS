@@ -11,7 +11,8 @@ interface events{
 
 interface event {
   title: String,
-  description: String
+  description: String,
+  date: string
 };
 
 @Component({

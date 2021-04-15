@@ -116,10 +116,12 @@
 
             <div class="field">
               <p class="control">
-                <div class="tag is-danger is-light is-medium is-rounded mt-1" *ngIf="errorSignup"><i
+
+                <div class="tag custom-tag is-danger is-light is-rounded is-medium content" *ngIf="errorSignup"><i
                     class="fas fa-bomb"></i>
-                  &nbsp;
-                  {{ errorSignup }}</div>
+                  {{ errorSignup }}
+
+                </div>
                 <br />
                 <button class="button is-rounded is-loading is-large mt-4" *ngIf="isLoadingS">
                   Loading
